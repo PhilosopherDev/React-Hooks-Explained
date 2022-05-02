@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import Counter from "./Hooks/Counter";
+import Info from "./Hooks/Info";
 
 function App() {
+
+  const [hook, setHook] = useState(null);
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div style={{marginBottom: "10px"}}>
+        <button onClick={() => setHook("useState")}>useState</button>
+        <button onClick={() => setHook("useEffect")}>useEffect</button>
+      </div>
+      <div>
+        {hook === "useState" ? <Counter /> : null}
+        {hook === "useEffect" ? <Info /> : null}
+      </div>
     </div>
   );
 }
