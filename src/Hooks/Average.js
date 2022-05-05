@@ -20,11 +20,15 @@ const Average = () => {
         setNumber('');
     }
 
+    const onKeyDown = e => {
+        if (e.keyCode === 13) onInsert();
+    }
+
     const avg = useMemo(() => getAverage(list), [list]);
 
     return (
         <div>
-            <input value={number} onChange={onChange} />
+            <input value={number} onChange={onChange} onKeyDown={onKeyDown} />
             <button onClick={onInsert}>등록</button>
             <ul>
                 {
