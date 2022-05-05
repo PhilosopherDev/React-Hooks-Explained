@@ -3,6 +3,7 @@ import Counter from "./Hooks/Counter";
 import Counter2 from "./Hooks/Counter2";
 import Info from "./Hooks/Info";
 import Info2 from "./Hooks/Info2";
+import Average from "./Hooks/Average";
 
 function App() {
 
@@ -16,12 +17,14 @@ function App() {
         <button onClick={() => setHook("useEffect")}>useEffect</button>
         <button onClick={() => setHook("useReducer")}>useReducer</button>
         <button onClick={() => setHook("useReducer2")}>useReducer2</button>
+        <button onClick={() => setHook("useMemo")}>useMemo</button>
       </div>
       <div>
         {hook === "useState" ? <Counter /> : null}
         {hook === "useEffect" ? <Info /> : null}
         {hook === "useReducer" ? <Counter2 /> : null}
         {hook === "useReducer2" ? <Info2 /> : null}
+        {hook === "useMemo" ? <Average /> : null}
       </div>
     </div>
   );
