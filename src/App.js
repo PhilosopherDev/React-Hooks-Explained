@@ -13,11 +13,11 @@ function App() {
   return (
     <div className="App">
       <div style={{marginBottom: "10px"}}>
-        <button onClick={() => setHook("useState")}>useState</button>
-        <button onClick={() => setHook("useEffect")}>useEffect</button>
-        <button onClick={() => setHook("useReducer")}>useReducer</button>
-        <button onClick={() => setHook("useReducer2")}>useReducer2</button>
-        <button onClick={() => setHook("useMemo")}>useMemo</button>
+        <button onClick={() => setHook("useState")}>Counter (useState)</button>
+        <button onClick={() => setHook("useEffect")}>Info (useEffect)</button>
+        <button onClick={() => setHook("useReducer")}>Counter2 (useReducer)</button>
+        <button onClick={() => setHook("useReducer2")}>Info2 (useReducer)</button>
+        <button onClick={() => setHook("useMemo")}>Average (useMemo, useCallback)</button>
       </div>
       <div>
         {hook === "useState" ? <Counter /> : null}
