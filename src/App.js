@@ -4,6 +4,7 @@ import Counter2 from "./Hooks/Counter2";
 import Info from "./Hooks/Info";
 import Info2 from "./Hooks/Info2";
 import Average from "./Hooks/Average";
+import Info3 from "./Hooks/Custom/info3";
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
         <button onClick={() => setHook("useReducer")}>Counter2 (useReducer)</button>
         <button onClick={() => setHook("useReducer2")}>Info2 (useReducer)</button>
         <button onClick={() => setHook("useMemo")}>Average (useMemo, useCallback)</button>
+        <button onClick={() => setHook("custom")}>Info3 (Custom Hook)</button>
       </div>
       <div>
         {hook === "useState" ? <Counter /> : null}
@@ -25,6 +27,7 @@ function App() {
         {hook === "useReducer" ? <Counter2 /> : null}
         {hook === "useReducer2" ? <Info2 /> : null}
         {hook === "useMemo" ? <Average /> : null}
+        {hook === "custom" ? <Info3 /> : null}
       </div>
     </div>
   );
